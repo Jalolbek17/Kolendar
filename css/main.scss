@@ -1,0 +1,90 @@
+@mixin mobile {
+    @media screen and (max-width: 950px) {
+        @content;
+    }
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 19px sans-serif;
+}
+
+body, .container, .days {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* MAIN */
+
+body {
+    min-height: 100vh;
+    background: #8E44AD;
+}
+
+.container {
+    flex-shrink: 0;
+    background: #fff;
+    width: 950px;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 7px 7px 15px rgba(0,0,0,.15);
+
+    @include mobile {
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .btn {
+        flex-shrink: 0;
+        box-sizing: content-box;
+        background-color: #333333;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        border: 17px solid #F1F1F1;
+        transition: background-color .1s, border-color .1s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #FE5D54;
+        }
+
+        &:active {
+            border-color: #eaeaea;
+        }
+    }
+
+    .days {
+        width: 100%;
+        margin: 0 1.6rem;
+        justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column;
+            margin: 1.6rem 1.4rem;
+        }
+
+        .date {
+            margin: 0 1.1rem;
+            user-select: none;
+            white-space: nowrap;
+
+            @include mobile {
+                margin: 1.1rem 0;
+            }
+    
+            &.bold {
+                font-weight: bold;
+            }
+        }
+    }
+
+}

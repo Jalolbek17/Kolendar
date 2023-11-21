@@ -1,0 +1,113 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font: 19px sans-serif;
+}
+
+body, .container, .days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* MAIN */
+body {
+  min-height: 100vh;
+  background: #8E44AD;
+}
+
+.container {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: #fff;
+  width: 950px;
+  padding: 1.5rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 950px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+.container .btn {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  background-color: #333333;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 17px solid #F1F1F1;
+  -webkit-transition: background-color .1s, border-color .1s;
+  transition: background-color .1s, border-color .1s;
+  cursor: pointer;
+}
+
+.container .btn:hover {
+  background-color: #FE5D54;
+}
+
+.container .btn:active {
+  border-color: #eaeaea;
+}
+
+.container .days {
+  width: 100%;
+  margin: 0 1.6rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 950px) {
+  .container .days {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 1.6rem 1.4rem;
+  }
+}
+
+.container .days .date {
+  margin: 0 1.1rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 950px) {
+  .container .days .date {
+    margin: 1.1rem 0;
+  }
+}
+
+.container .days .date.bold {
+  font-weight: bold;
+}
+/*# sourceMappingURL=main.css.map */
